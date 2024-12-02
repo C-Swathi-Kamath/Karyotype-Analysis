@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="row">
+<div class="col p-2 mx-3">
+    <h2>Insert the Image</h2>
+   
+
+    <div class="image-section text-center mx-auto m-3" style="display:none;">
+        <div class="img-preview text-center mx-auto">
+            <div id="imagePreview">
+            </div>
+        </div>
+
+    </div>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class=" btn btn-lg upload-label my-4">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+</div>
+
+<div class="col p-2 mx-3">
+    <h2>Predicted Class</h2>
+    <h3 id="result" class="font-weight-bold my-3" >
+        <span> </span>
+     </h3>
+     <h3 id="xgResult" class="font-weight-bold my-3" >
+        <span> </span>
+     </h3>
+     <h3 id="nbResult" class="font-weight-bold my-3" >
+        <span> </span>
+     </h3>
+     <h3 id="rfResult" class="font-weight-bold my-3" >
+        <span> </span>
+     </h3>
+     <h3 id="svmResult" class="font-weight-bold my-3" >
+        <span> </span>
+     </h3>
+    <div class="my-4 p-1">
+        <button type="button" class="btn btn-lg upload-label" id="btn-predict" style="display:none;">Predict!</button>
+    </div>
+    <div class="loader mx-auto" style="display:none;"></div>
+
+  
+</div>
+</div>
+
+
+{% endblock %}
